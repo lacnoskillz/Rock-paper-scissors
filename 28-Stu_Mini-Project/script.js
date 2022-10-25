@@ -28,13 +28,13 @@ if ((playerchoice != "R") && (playerchoice != "S") && (playerchoice != "P")) {
     console.log("enter R for rock P for paper or S for scissors");
 playgame();
 }
- else if((playerchoice = "R") && (computerchoice = "R" )) {
+ else if((playerchoice == "R") && (computerchoice == "R" )) {
     console.log("its a tie!");
     ties++;
-    console.log("score");
-    console.log("wins",wins);
-    console.log("losses",losses);
-    console.log("ties",ties);
+    console.log("score:");
+    console.log("wins:",wins);
+    console.log("losses:",losses);
+    console.log("ties:",ties);
     playerchoice= confirm("wana play again?");
     if (playerchoice == false){
         console.log("gg");
@@ -43,13 +43,13 @@ playgame();
         playgame();
     }
 } 
-else if ((playerchoice ="R") && (computerchoice ="S") ){
+else if ((playerchoice == "R") && (computerchoice =="S") ) {
     console.log("you won!");
     wins++;
-    console.log("score");
-    console.log("wins",wins);
-    console.log("losses",losses);
-    console.log("ties",ties);
+    console.log("score:");
+    console.log("wins:",wins);
+    console.log("losses:",losses);
+    console.log("ties:",ties);
     playerchoice= confirm("wana play again?");
     if (playerchoice == false){
         console.log("gg");
@@ -58,7 +58,28 @@ else if ((playerchoice ="R") && (computerchoice ="S") ){
         playgame();
     }
 
+} else if ((playerchoice == "R") && (computerchoice == "P") ) {
+    console.log("you lost!");
+    losses++;
+    console.log("score:");
+    console.log("wins:",wins);
+    console.log("losses:",losses);
+    console.log("ties:",ties);
+    playerchoice= confirm("wana play again?");
+    if (playerchoice == false){
+        console.log("gg");
+        return;
+    } else {
+        playgame();
+    }
 }
+
+
+
+
+
+
+
 
 }
 
