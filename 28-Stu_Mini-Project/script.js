@@ -11,7 +11,11 @@ var options = ["R", "P", "S"];
 var playgame = function(){
 
 playerchoice= prompt("lets play Rock paper scissors");
-
+if (playerchoice == null){
+    console.log("refresh page to play")
+    return;
+}
+playerchoice= (playerchoice.toUpperCase());
 
 
 var computerchoice = Math.floor(Math.random()*3);
@@ -24,10 +28,10 @@ console.log("your choice",playerchoice);
 
 
 
-if ((playerchoice != "R") && (playerchoice != "S") && (playerchoice != "P") || (playerchoice == null)) {
+if ((playerchoice != "R") && (playerchoice != "S") && (playerchoice != "P") ){
     console.log("enter R for rock P for paper or S for scissors");
 playgame();
-playerchoice= (playerchoice.toUpperCase());
+
 }
  else if (playerchoice == computerchoice) {
     console.log("its a tie!");
